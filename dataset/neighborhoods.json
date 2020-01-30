@@ -1,0 +1,27 @@
+{
+	"name": "neighborhoods",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "HousingDataStore",
+			"type": "LinkedServiceReference"
+		},
+		"annotations": [],
+		"type": "DelimitedText",
+		"typeProperties": {
+			"location": {
+				"type": "AzureBlobStorageLocation",
+				"fileName": "neighborhoods.txt",
+				"container": "housingdata"
+			},
+			"columnDelimiter": "\t",
+			"escapeChar": "\\",
+			"quoteChar": "\""
+		},
+		"schema": [
+			{
+				"type": "String"
+			}
+		]
+	},
+	"type": "Microsoft.DataFactory/factories/datasets"
+}

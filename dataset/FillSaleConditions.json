@@ -1,0 +1,17 @@
+{
+	"name": "FillSaleConditions",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "ArtoHousingDb",
+			"type": "LinkedServiceReference"
+		},
+		"annotations": [],
+		"type": "AzureSqlTable",
+		"schema": [],
+		"typeProperties": {
+			"schema": "dbo",
+			"table": "salecond"
+		}
+	},
+	"type": "Microsoft.DataFactory/factories/datasets"
+}

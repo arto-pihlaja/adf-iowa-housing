@@ -1,0 +1,27 @@
+{
+	"name": "BuildingTypeFile",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "HousingDataStore",
+			"type": "LinkedServiceReference"
+		},
+		"annotations": [],
+		"type": "DelimitedText",
+		"typeProperties": {
+			"location": {
+				"type": "AzureBlobStorageLocation",
+				"fileName": "buildingtypes.txt",
+				"container": "housingdata"
+			},
+			"columnDelimiter": "\t",
+			"escapeChar": "\\",
+			"quoteChar": "\""
+		},
+		"schema": [
+			{
+				"type": "String"
+			}
+		]
+	},
+	"type": "Microsoft.DataFactory/factories/datasets"
+}

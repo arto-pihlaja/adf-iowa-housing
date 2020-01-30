@@ -1,0 +1,53 @@
+{
+	"name": "HousingFactTable",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "ArtoHousingDb",
+			"type": "LinkedServiceReference"
+		},
+		"annotations": [],
+		"type": "AzureSqlTable",
+		"schema": [
+			{
+				"name": "neighborhood",
+				"type": "int",
+				"precision": 10
+			},
+			{
+				"name": "overallcond",
+				"type": "int",
+				"precision": 10
+			},
+			{
+				"name": "overallqual",
+				"type": "int",
+				"precision": 10
+			},
+			{
+				"name": "buildingtype",
+				"type": "int",
+				"precision": 10
+			},
+			{
+				"name": "salecond",
+				"type": "int",
+				"precision": 10
+			},
+			{
+				"name": "saledate",
+				"type": "date"
+			},
+			{
+				"name": "salestotal",
+				"type": "money",
+				"precision": 19,
+				"scale": 4
+			}
+		],
+		"typeProperties": {
+			"schema": "dbo",
+			"table": "salesfacts"
+		}
+	},
+	"type": "Microsoft.DataFactory/factories/datasets"
+}

@@ -1,0 +1,27 @@
+{
+	"name": "OverallCondTable",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "ArtoHousingDb",
+			"type": "LinkedServiceReference"
+		},
+		"annotations": [],
+		"type": "AzureSqlTable",
+		"schema": [
+			{
+				"name": "grade",
+				"type": "int",
+				"precision": 10
+			},
+			{
+				"name": "gradename",
+				"type": "varchar"
+			}
+		],
+		"typeProperties": {
+			"schema": "dbo",
+			"table": "overallcond"
+		}
+	},
+	"type": "Microsoft.DataFactory/factories/datasets"
+}

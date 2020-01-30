@@ -1,0 +1,31 @@
+{
+	"name": "BuidlingTypeTable",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "ArtoHousingDb",
+			"type": "LinkedServiceReference"
+		},
+		"annotations": [],
+		"type": "AzureSqlTable",
+		"schema": [
+			{
+				"name": "id",
+				"type": "int",
+				"precision": 10
+			},
+			{
+				"name": "abbrev",
+				"type": "varchar"
+			},
+			{
+				"name": "name",
+				"type": "varchar"
+			}
+		],
+		"typeProperties": {
+			"schema": "dbo",
+			"table": "buildingtype"
+		}
+	},
+	"type": "Microsoft.DataFactory/factories/datasets"
+}

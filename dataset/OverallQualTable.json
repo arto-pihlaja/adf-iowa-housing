@@ -1,0 +1,17 @@
+{
+	"name": "OverallQualTable",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "ArtoHousingDb",
+			"type": "LinkedServiceReference"
+		},
+		"annotations": [],
+		"type": "AzureSqlTable",
+		"schema": [],
+		"typeProperties": {
+			"schema": "dbo",
+			"table": "overallqual"
+		}
+	},
+	"type": "Microsoft.DataFactory/factories/datasets"
+}

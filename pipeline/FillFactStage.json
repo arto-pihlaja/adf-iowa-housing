@@ -1,0 +1,134 @@
+{
+	"name": "FillFactStage",
+	"properties": {
+		"activities": [
+			{
+				"name": "FillSalesStage",
+				"type": "Copy",
+				"dependsOn": [],
+				"policy": {
+					"timeout": "7.00:00:00",
+					"retry": 0,
+					"retryIntervalInSeconds": 30,
+					"secureOutput": false,
+					"secureInput": false
+				},
+				"userProperties": [],
+				"typeProperties": {
+					"source": {
+						"type": "DelimitedTextSource",
+						"storeSettings": {
+							"type": "AzureBlobStorageReadSettings",
+							"recursive": true
+						},
+						"formatSettings": {
+							"type": "DelimitedTextReadSettings"
+						}
+					},
+					"sink": {
+						"type": "AzureSqlSink"
+					},
+					"enableStaging": false,
+					"translator": {
+						"type": "TabularTranslator",
+						"mappings": [
+							{
+								"source": {
+									"name": "Neighborhood",
+									"type": "String"
+								},
+								"sink": {
+									"name": "neighborhood",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"name": "BldgType",
+									"type": "String"
+								},
+								"sink": {
+									"name": "bldgtype",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"name": "OverallQual",
+									"type": "String"
+								},
+								"sink": {
+									"name": "overallqual",
+									"type": "Int32"
+								}
+							},
+							{
+								"source": {
+									"name": "OverallCond",
+									"type": "String"
+								},
+								"sink": {
+									"name": "overallcond",
+									"type": "Int32"
+								}
+							},
+							{
+								"source": {
+									"name": "SaleCondition",
+									"type": "String"
+								},
+								"sink": {
+									"name": "salecondition",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"name": "MoSold",
+									"type": "String"
+								},
+								"sink": {
+									"name": "mosold",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"name": "YrSold",
+									"type": "String"
+								},
+								"sink": {
+									"name": "yrsold",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"name": "SalePrice",
+									"type": "String"
+								},
+								"sink": {
+									"name": "saleprice",
+									"type": "Decimal"
+								}
+							}
+						]
+					}
+				},
+				"inputs": [
+					{
+						"referenceName": "HousingTestData",
+						"type": "DatasetReference"
+					}
+				],
+				"outputs": [
+					{
+						"referenceName": "SalesStageTable",
+						"type": "DatasetReference"
+					}
+				]
+			}
+		],
+		"annotations": []
+	}
+}

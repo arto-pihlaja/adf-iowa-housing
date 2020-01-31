@@ -1,0 +1,53 @@
+{
+	"name": "SalesStageTable",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "ArtoHousingDb",
+			"type": "LinkedServiceReference"
+		},
+		"annotations": [],
+		"type": "AzureSqlTable",
+		"schema": [
+			{
+				"name": "neighborhood",
+				"type": "varchar"
+			},
+			{
+				"name": "bldgtype",
+				"type": "varchar"
+			},
+			{
+				"name": "overallqual",
+				"type": "int",
+				"precision": 10
+			},
+			{
+				"name": "overallcond",
+				"type": "int",
+				"precision": 10
+			},
+			{
+				"name": "salecondition",
+				"type": "varchar"
+			},
+			{
+				"name": "mosold",
+				"type": "varchar"
+			},
+			{
+				"name": "yrsold",
+				"type": "varchar"
+			},
+			{
+				"name": "saleprice",
+				"type": "money",
+				"precision": 19,
+				"scale": 4
+			}
+		],
+		"typeProperties": {
+			"schema": "dbo",
+			"table": "salesstage"
+		}
+	}
+}
